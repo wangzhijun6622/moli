@@ -1,4 +1,3 @@
-测试在responsive 新建文件命令 vi + 文件名
 1. vi，或者vim是一款编辑器
 2. vi可以用来编辑或者新建一个文件
 3. vi中分为insert模式 normal模式 visual 模式
