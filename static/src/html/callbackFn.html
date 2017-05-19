@@ -1,0 +1,46 @@
+<!DOCTYPE html >
+<html>
+	<head>　　
+		<title>Document </title>
+		<meta charset="utf-8" />
+		<link type="text/css" rel="stylesheet" href="CSS文件路径" />
+		<script type="text/javascript" src="JS文件路径"></script>
+	</head>
+	<body>
+		<script>
+            function fn(url, callback){
+
+                 var httpRequest;　　　　//创建XHR
+
+                 httpRequest = window.XMLHttpRequest ? new XMLHttpRequest() : window.ActiveXObject ? new ActiveXObject("Microsoft.XMLHTTP") : undefined; 　//针对IE进行功能性检测
+
+                 httpRequest.onreadystatechange = function(){
+
+					  if(httpRequest.readystate === 4 && httpRequest.status === 200){　　//状态判断
+					   
+							callback.call(httpRequest.responseXML);
+
+					  }
+
+                 };
+
+                 httpRequest.open("GET", url);
+
+                 httpRequest.send();
+
+                }
+
+                fn("text.xml", function(){　　　　//调用函数
+
+                 	console.log(this); 　　		//此语句后输出
+
+                });
+
+                console.log("this will run before the above callback.");　　//此语句先输出
+
+
+				//第二个console.log语句先执行,因为回调函数直到请求完成才执行.
+        </script>
+	</body>
+</html>
+
