@@ -8,7 +8,7 @@ var ued_conf ={
 //		interPath: '/bizcenter-web',
 //		publishVersion:'V2017',
 //		mode:'dev' // dev/online
-		root: 'moli/static/',
+		root: '../',
 		ampath:'../moli/',
 		version:'v0.0.1',
 		waitTime: 60,
@@ -19,7 +19,9 @@ var ued_conf ={
 
 };
 
-window.ued_souce = {"commonJs.js":["src/lib/jquery/jquery-1.8.3.min.js","src/js/common/common.js"],"commonCss.css":["src/lib/bootstrap/css/bootstrap.min.css"]}
+window.ued_souce = {
+					"commonJs.js":["src/lib/jquery/jquery-1.8.3.min.js","src/lib/jquery/require.js","src/js/common/pageCommon.js","src/js/page/menu.js"],
+					"commonCss.css":["src/lib/bootstrap/css/bootstrap.min.css"]}
 var ued_root = ued_conf.root;
 /**
  *@function import	
