@@ -20,8 +20,8 @@ var ued_conf ={
 };
 
 window.ued_souce = {
-					"commonJs.js":["src/lib/jquery/jquery-1.8.3.min.js","src/lib/jquery/require.js","src/js/common/pageCommon.js","src/js/page/menu.js"],
-					"commonCss.css":["src/lib/bootstrap/css/bootstrap.min.css"]}
+					"commonJs.js":["lib/jquery/jquery-1.8.3.min.js","lib/jquery/require.js","js/common/pageCommon.js","js/page/menu.js"],
+					"commonCss.css":["lib/bootstrap/css/bootstrap.min.css"]}
 var ued_root = ued_conf.root;
 /**
  *@function import	

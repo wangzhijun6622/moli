@@ -1,9 +1,10 @@
 require([
-	"../src/js/common/interface",
-	"../src/js/common/pageCommon",
-	"../src/js/common/util"
-	],function(inter,pageCommon,util){
+	'../js/common/pageCommon',
+	'../js/common/util'
+	],
+	function(pageCommon,util){
 
-		pageCommon.initMenu();
+//		 console.log(pageCommon.initMenu("zjwang"));
+		 console.log(pageCommon.add(1,1));
 
 })

@@ -1,16 +1,41 @@
 /**
  * @description: 页面交互公用模块
  */
-define('common/pageCommon',[
-	'common/interface'
-	,'common/util'
-],function(inter,util){
-	//
-	return{
+//define(
+//	function(){
+//	//
+//		return{
+//
+//			//头部menu交互效果
+//			initMenu:function(){
+//				alert("define common" );
+//		}
+//	}
+//})
+define(function(){
+    var add = function(x,y){
 
-		//头部menu交互效果
-		initMenu:function(e){
-			alert("define common" );
-		}
-	}
+        return x + y ;
+
+    };
+    return {
+
+        add : add
+    };
+
 })
+//define(function () {
+//
+//        initMenu = function(name){
+//
+//            console.log(name+"11111");
+//        }
+//
+//    return {
+//        /**
+//         * 头部menu交互效果
+//         */
+//
+//        initMenu: initMenu
+//    };
+//});

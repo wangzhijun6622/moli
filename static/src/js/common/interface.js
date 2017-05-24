@@ -9,7 +9,7 @@ define('common/interface',[],function(){
 		getApiUrl : function (){
 			var confUrlPath = ued_conf.interPath;
 			return	{
-				 
+
 				/*登录*/
 				_toLoginUrl :confUrlPath +'/toLogin'
 				,_getValCodeUrl: confUrlPath +'/getValCode'//获取验证码
@@ -17,7 +17,7 @@ define('common/interface',[],function(){
 				,loginsendUrl:confUrlPath+'login' //登录提交
 
 
-			};	
+			};
 
 		}
 	};
