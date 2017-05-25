@@ -1,10 +1,10 @@
 require([
-	'../js/common/pageCommon',
-	'../js/common/util'
-	],
-	function(pageCommon,util){
+	"../js/common/interface",
+	"../js/common/pageCommon",
+	"../js/common/util"
+	],function(inter,pageCommon,util){
 
-//		 console.log(pageCommon.initMenu("zjwang"));
-		 console.log(pageCommon.add(1,1));
+	 console.log("menu.js");
+		 pageCommon.add(1,1)
 
 })

@@ -8,10 +8,11 @@
 //
 //			//头部menu交互效果
 //			initMenu:function(){
-//				alert("define common" );
+//				console.log("define common" );
 //		}
 //	}
 //})
+
 define(function(){
     var add = function(x,y){
 
@@ -19,23 +20,7 @@ define(function(){
 
     };
     return {
-
         add : add
     };
 
 })
-//define(function () {
-//
-//        initMenu = function(name){
-//
-//            console.log(name+"11111");
-//        }
-//
-//    return {
-//        /**
-//         * 头部menu交互效果
-//         */
-//
-//        initMenu: initMenu
-//    };
-//});
