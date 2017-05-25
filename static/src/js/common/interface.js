@@ -16,7 +16,6 @@ define('common/interface',[],function(){
 				,_tologoutUrl:confUrlPath + '/logout'
 				,loginsendUrl:confUrlPath+'login' //登录提交
 
-
 			};
 
 		}
