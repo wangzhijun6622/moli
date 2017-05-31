@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+        <title>原型和闭包</title>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+             function show(x) {
+
+                   console.log(typeof x);
+                   console.log(typeof 10);
+                   console.log(typeof 'abc');
+                   console.log(typeof true);
+                   console.log(typeof function(){});
+                   console.log(typeof [1,'a',true]);
+                   console.log(typeof null);
+                   console.log(typeof new number(10));
+
+             }
+             //typeof 函数输出的几种类型
+             show();
+             //判断一个变量是不是对象 值类型用typeof ,引用类型用instanceof
+             var fn = function(){};
+             console.log(fn instanceof object)  //true
+
+        </script>
+    </body>
+</html>

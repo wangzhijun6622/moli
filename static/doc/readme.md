@@ -1,3 +1,18 @@
+    0531 : git pull 和 push 总是报错 在公司电脑上push不到远端 已经gitpull 后 $ git push 报错
+            我感觉是因为有一次提交时候把Python的idea配置文件提交了 在远端删除后依然没有解决问题
+            报错如下
+            To https://github.com/wangzhijun6622/moli.git
+             ! [rejected]        master -> master (non-fast-forward)
+            error: failed to push some refs to 'https://github.com/wangzhijun6622/moli.git'
+            hint: Updates were rejected because the tip of your current branch is behind
+            hint: its remote counterpart. Integrate the remote changes (e.g.
+            hint: 'git pull ...') before pushing again.
+            hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+            查看一些已经commit 还未push的内容
+            $ Git log master ^origin/master
+
+
 
 
 

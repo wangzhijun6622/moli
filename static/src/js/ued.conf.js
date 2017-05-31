@@ -13,7 +13,7 @@ var ued_conf ={
 		waitTime: 60,
 		mPath :'//',
 		interPath: '/bizcenter-web',
-		publishVersion:'V2017'
+		publishVersion:'V2017',
 		mode:'dev' // dev/online
 
 };
