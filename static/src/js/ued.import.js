@@ -21,7 +21,7 @@ var ued_conf ={
 
 window.ued_souce = {
 					"commonJs.js":["lib/jquery/require.js","lib/jquery/jquery-1.8.3.min.js","js/page/menu.js"],
-					"commonCss.css":["lib/bootstrap/css/bootstrap.min.css","css/header.css"]}
+					"commonCss.css":["lib/bootstrap/css/bootstrap.min.css","css/header.css","css/footer.css"]}
 var ued_root = ued_conf.root;
 /**
  *@function import	
@@ -34,7 +34,7 @@ function ued_import(id,filetype,mode,isHead){
 	var     __id = id+'.' +filetype,
 //			__mode = ued_mode,
 			jsTemplate = '<script src="${src}" charset="utf-8" type="text/javascript" itemid="${itemid}"><\/script>',
-			cssTemplate = '<link rel="stylesheet" type="text/css" href="${href}"';
+			cssTemplate = '<link rel="stylesheet" type="text/css" href="${href}">';
 
 	function __import(aFiles,type,id){
 	
