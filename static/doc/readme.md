@@ -1,4 +1,15 @@
-    0531 : git pull 和 push 总是报错 在公司电脑上push不到远端 已经gitpull 后 $ git push 报错
+0603 : 不知道是好事还是坏事 对感情的事 很难让自己将就 有过要不就凑合吧 反正家里也着急 迟早都要嫁
+       可惜没办法让自己委屈自己的感情 很难笑着跟自己不喜欢的人生活
+       command + T  浏览器打开新的窗口
+       command + R  刷新
+       shift + command + R 强制刷新浏览器
+       option + ↑ 选中当前词
+       option + ↑↑ 选中当前行
+       option + ↑↑↑ 全选  相当于command + A
+
+
+
+0531 : git pull 和 push 总是报错 在公司电脑上push不到远端 已经gitpull 后 $ git push 报错
             我感觉是因为有一次提交时候把Python的idea配置文件提交了 在远端删除后依然没有解决问题
             报错如下
             To https://github.com/wangzhijun6622/moli.git
