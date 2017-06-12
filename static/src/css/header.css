@@ -55,6 +55,9 @@ body{
 	width:16%;
 	line-height:50px ;
 }
+.index_r li a{
+	color:white;
+}
 .f-left{
 	float: left;
 }
