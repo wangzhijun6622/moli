@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<title>moli</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<script type="text/javascript" src="../js/ued.import.js "></script>
+		<script type="text/javascript" >
+			 ued_import('commonCss', 'css');
+		</script>
+		<style type="text/css">
+			body{margin:0;padding:0}
+		</style>
+	</head>
+	<body>
+		<div id="menu">
+			<img class="img_menu" src="../images/menu/1.jpg" >
+			<img class="img_menu" src="../images/menu/2.jpg" >
+			<img class="img_menu" src="../images/menu/3.jpg" >
+			<img class="img_menu" src="../images/menu/4.jpg" >
+			<img class="img_menu" src="../images/menu/5.jpg" >
+			<img class="img_menu" src="../images/menu/6.jpg" >
+			<img class="img_menu" src="../images/menu/7.jpg" >
+		</div>
+		<script type="text/javascript">
+			ued_import("commonJs","js");
+		</script>
+	</body>
+	<script type="text/javascript">
+		$(ready){
+			
+		}
+		window.onload = function ()
+		{
+			var oMenu = $("#menu");
+			var aImg = $("#menu img");
+			var aWidth = [];
+			var i = 0;
+			//保存原宽度, 并设置当前宽度
+			for (i = 0; i < aImg.length; i++)
+			{
+				aWidth.push(aImg[i].offsetWidth);
+				aImg[i].width = parseInt(aImg[i].offsetWidth / 2);
+			}
+			//鼠标移动事件
+			$(document).onmousemove = function (event)
+			{
+				var event = event || window.event;
+				for (i = 0; i < aImg.length; i++)
+				{
+					var a = event.clientX - aImg[i].offsetLeft - aImg[i].offsetWidth / 2;
+					var b = event.clientY - aImg[i].offsetTop - oMenu.offsetTop - aImg[i].offsetHeight / 2;
+					var iScale = 1 - Math.sqrt(a * a + b * b) / 300;
+					if (iScale < 0.5) iScale = 0.5;
+					aImg[i].width = aWidth[i] * iScale
+				}
+			};
+		};
+	</script>
+</html>
