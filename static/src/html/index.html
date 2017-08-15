@@ -13,14 +13,39 @@
 		</style>
 	</head>
 	<body>
-		<div class="row ">
-			<div class="col-md-12">
-				<p>moli之家</p>
-				<input class="form-control" placeholder="majicJun">
+		<div class="header"></div>
+		<div class="content">
+			<div class="row">
 			</div>
+			<section ng-app>
+				<div>省市地区三级联动</div>
+				<div ng-controller="" >
+					<select ng-option=""></select>
+				</div>	
+			</section>
+			
+			<hr/>
 		</div>
+		<div class="footer"></div>
+		<header></header>
 		<script type="text/javascript">
 			ued_import("commonJs","js");
+			ued_import("echartJs","js");
+		</script>
+		<script>
+		 $.ajax({
+			 type:"GET",
+			 dataType : 'jsonp',
+			 jsonp : 'callback',
+			 url : 'header.html',
+//			 async : false,
+			 data : '',
+			 success : function(data){
+				 console("111")
+				 var result = $(data);
+				 $(".header").html(result);
+			 }
+		 });
 		</script>
 	</body>
 </html>

@@ -21,6 +21,7 @@ var ued_conf ={
 
 window.ued_souce = {
 					"commonJs.js":["lib/jquery/require.js","lib/jquery/jquery-1.8.3.min.js","js/page/menu.js"],
+					"echartJs.js":["lib/echarts/echarts.min.js","lib/jquery/jquery-1.8.3.min.js","js/page/menu.js"],
 					"commonCss.css":["lib/bootstrap/css/bootstrap.min.css","css/common.css","css/header.css","css/footer.css"]}
 var ued_root = ued_conf.root;
 /**
