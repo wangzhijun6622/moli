@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<my-component></my-component>
+<div id='app'>
+        <button v-if='showBtn' v-on='handleClick'>Click me</button>
+        <div>
+            <ul>
+                <li v-for="book in books">{{book.name}}</li>
+            </ul>
+        </div>
+        <div>
+            <input type="text" v-model="name" placeholder="your name">
+            <h3>hi {{name}}</h3>
+        </div>
+        <span v-html="link"></span>
+        <span v-pre>{{这里的内容是不会被编译的}}</span>
+        <div>
+         dev分支的修改:----------``'--'  当前时间{{date | formatDate}}
+        </div>
+    <my-component mes1="来自父组件的数据 "></my-component>
+    <my-component2>
+        <p>分发的内容</p>
+    </my-component2>
+    <my-compontent3 slot>
+
+    </my-compontent3>
+    </div>
+<!-- css3变换位置的小球-->
+<style>
+    .boll-div{
+        position: absolute;
+        -moz-animation: mymove 5s infinite;
+        -webkit-animation: mymove 5s infinite;
+    }
+    @-moz-keyframes mymove {
+        0% {top:0px;}
+        25% {top:200px;left:200px;}
+        75% {top:50px;left: 10px;}
+        100%{top:100px;left:60px;}
+    }
+</style>
+<div  class="boll-div">
+    <img src="../img/point.png">
+</div>
+
+</body>
+<script src="../lib/vue.js"></script>
+
+
+<script>
+    //当数值小于10是在前面补0
+    function padDate(val){
+//        if(val<10){
+//            val = "0"+val;
+//        }
+//        return val;
+        return val < 10 ? "0"+val:val;
+    }
+    Vue.component('my-component',{
+        props:['mes1'],
+        template:'<div>这里是 {{ mes }}{{mes1}}</div>',
+        data:function(){
+            return {
+                mes:'组件内容'
+            }
+        }
+    });
+    new Vue({
+        el:'#app',
+        data:{
+            showBtn:true,
+            books:[
+                {name:'vue.js实战'},
+                {name:'js实战'},
+                {name:'js高级程序设计'}
+            ],
+            a:2,
+            name:'',
+            link:'<a href="http://www.baidu.com">这是一个链接</a>',
+            date:new Date(),
+        },
+        created:function(){
+            console.log(this.a)
+        },
+        mounted: function () {
+            console.log(this.$el)
+        },
+        filters:{
+            formatDate:function(value){  //value是需要过滤的数据
+                var date = new Date(value);
+                var year = date.getFullYear();
+                var month = padDate(date.getMonth()+1);
+                var day = padDate(date.getDay());
+                var hours = padDate(date.getHours());
+                var min = padDate(date.getMinutes());
+                var ss = padDate(date.getSeconds());
+                return year+'-'+month+'-'+day +" "+hours+":"+min+":"+ss;
+            }
+        },
+        components:{
+            'my-component1':{
+                template:'<div>这里是局部组件</div>'
+            },
+            'my-component2':{
+                template:'<div><slot><p>如果父组件没有插入内容,我将作为默认出现</p></slot></div>'
+            },
+            'my-component3':{
+                template:'<div><slot><p>如果父组件没有插入内容,我将作为默认出现333</p></slot></div>'
+            },
+        },
+        methods:{
+            handleClick: function () {
+                alert('nannaa');
+            }
+        },
+    })
+</script>
+</html>
